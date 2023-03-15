@@ -1,6 +1,6 @@
 # Lab5_202001001
 # Static Analysis Using MYPY Tool
-
+```sh
 ## Setting.py
 """
 Django settings for auto_attendance project.
@@ -291,50 +291,51 @@ def general_logout(request):
     logout(request)
     return redirect("home_page")
 #################################################################################################
+```
 
-##Error 1
-### Syntax Error Found in asgi.py
--IT314_dummy-main\auto_attendance\asgi.py:16: error: '(' was never closed  [syntax]
--Found 1 error in 1 file (errors prevented further checking)
+# Error 1
+## Syntax Error Found in asgi.py
+- IT314_dummy-main\auto_attendance\asgi.py:16: error: '(' was never closed  [syntax]
+- Found 1 error in 1 file (errors prevented further checking)
 
-##Error 2
-### Import Error Found in urls.py
--IT314_dummy-main\manage.py:11: error: Skipping analyzing "django.core.management": module is installed, but missing library stubs or py.typed marker  [import]
--IT314_dummy-main\auto_attendance\wsgi.py:12: error: Skipping analyzing "django.core.wsgi": module is installed, but missing library stubs or py.typed marker  [import]
--IT314_dummy-main\auto_attendance\views.py:2: error: Skipping analyzing "django.shortcuts": module is installed, but missing library stubs or py.typed marker  [import]
--IT314_dummy-main\auto_attendance\views.py:3: error: Skipping analyzing "django.contrib.auth.models": module is installed, but missing library stubs or 
+# Error 2
+## Import Error Found in urls.py
+- IT314_dummy-main\manage.py:11: error: Skipping analyzing "django.core.management": module is installed, but missing library stubs or py.typed marker  [import]
+- IT314_dummy-main\auto_attendance\wsgi.py:12: error: Skipping analyzing "django.core.wsgi": module is installed, but missing library stubs or py.typed marker  [import]
+- IT314_dummy-main\auto_attendance\views.py:2: error: Skipping analyzing "django.shortcuts": module is installed, but missing library stubs or py.typed marker  [import]
+- IT314_dummy-main\auto_attendance\views.py:3: error: Skipping analyzing "django.contrib.auth.models": module is installed, but missing library stubs or 
 py.typed marker  [import]
--IT314_dummy-main\auto_attendance\views.py:4: error: Skipping analyzing "django.contrib.auth": module is installed, but missing library stubs or py.typed marker  [import]
--IT314_dummy-main\auto_attendance\views.py:5: error: Skipping analyzing "django.contrib": module is installed, but missing library stubs or py.typed marker  [import]
--IT314_dummy-main\auto_attendance\settings.py:28: error: Need type annotation for "ALLOWED_HOSTS" (hint: "ALLOWED_HOSTS: List[<type>] = ...")  [var-annotated]
--IT314_dummy-main\auto_attendance\asgi.py:12: error: Skipping analyzing "django.core.asgi": module is installed, but missing library stubs or py.typed marker  [import]
--IT314_dummy-main\auto_attendance\asgi.py:12: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
--Found 8 errors in 5 files (checked 7 source files)
+- IT314_dummy-main\auto_attendance\views.py:4: error: Skipping analyzing "django.contrib.auth": module is installed, but missing library stubs or py.typed marker  [import]
+- IT314_dummy-main\auto_attendance\views.py:5: error: Skipping analyzing "django.contrib": module is installed, but missing library stubs or py.typed marker  [import]
+- IT314_dummy-main\auto_attendance\settings.py:28: error: Need type annotation for "ALLOWED_HOSTS" (hint: "ALLOWED_HOSTS: List[<type>] = ...")  [var-annotated]
+- IT314_dummy-main\auto_attendance\asgi.py:12: error: Skipping analyzing "django.core.asgi": module is installed, but missing library stubs or py.typed marker  [import]
+- IT314_dummy-main\auto_attendance\asgi.py:12: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+- Found 8 errors in 5 files (checked 7 source files)
 
-##Error 3
-###Name Defined Error Found in settings.py
--IT314_dummy-main\auto_attendance\settings.py:79: error: Name "BASEDIR" is not defined  [name-defined]
--Found 1 error in 1 file (errors prevented further checking)
+# Error 3
+## Name Defined Error Found in settings.py
+- IT314_dummy-main\auto_attendance\settings.py:79: error: Name "BASEDIR" is not defined  [name-defined]
+- Found 1 error in 1 file (errors prevented further checking)
 
-##Error 4
-### Syntax Error Found in wsgi.py
--IT314_dummy-main\auto_attendance\wsgi.py:10: error: invalid syntax  [syntax]
--Found 1 error in 1 file (errors prevented further checking)
+# Error 4
+## Syntax Error Found in wsgi.py
+- IT314_dummy-main\auto_attendance\wsgi.py:10: error: invalid syntax  [syntax]
+- Found 1 error in 1 file (errors prevented further checking)
 
-##Error 5
-### Import and Var-annotated Error Found in urls.py,setting.py,asgi.py,view.py,wsgi.py
--IT314_dummy-main\manage.py:11: error: Skipping analyzing "django.core.management": module is installed, but missing library stubs or py.typed marker  [import]
--IT314_dummy-main\auto_attendance\wsgi.py:12: error: Skipping analyzing "django.core.wsgi": module is installed, but missing library stubs or py.typed marker  [import]
--IT314_dummy-main\auto_attendance\views.py:2: error: Skipping analyzing "django.shortcuts": module is installed, but missing library stubs or py.typed marker  [import]
--IT314_dummy-main\auto_attendance\views.py:3: error: Skipping analyzing "django.contrib.auth.models": module is installed, but missing library stubs or 
+# Error 5
+## Import and Var-annotated Error Found in urls.py,setting.py,asgi.py,view.py,wsgi.py
+- IT314_dummy-main\manage.py:11: error: Skipping analyzing "django.core.management": module is installed, but missing library stubs or py.typed marker  [import]
+- IT314_dummy-main\auto_attendance\wsgi.py:12: error: Skipping analyzing "django.core.wsgi": module is installed, but missing library stubs or py.typed marker  [import]
+- IT314_dummy-main\auto_attendance\views.py:2: error: Skipping analyzing "django.shortcuts": module is installed, but missing library stubs or py.typed marker  [import]
+- IT314_dummy-main\auto_attendance\views.py:3: error: Skipping analyzing "django.contrib.auth.models": module is installed, but missing library stubs or 
 py.typed marker  [import]
--IT314_dummy-main\auto_attendance\views.py:4: error: Skipping analyzing "django.contrib.auth": module is installed, but missing library stubs or py.typed marker  [import]
--IT314_dummy-main\auto_attendance\views.py:5: error: Skipping analyzing "django.contrib": module is installed, but missing library stubs or py.typed marker  [import]
--IT314_dummy-main\auto_attendance\urls.py:1: error: Skipping analyzing "django.contrib": module is installed, but missing library stubs or py.typed marker  [import]
--IT314_dummy-main\auto_attendance\urls.py:2: error: Skipping analyzing "django.urls": module is installed, but missing library stubs or py.typed marker 
+- IT314_dummy-main\auto_attendance\views.py:4: error: Skipping analyzing "django.contrib.auth": module is installed, but missing library stubs or py.typed marker  [import]
+- IT314_dummy-main\auto_attendance\views.py:5: error: Skipping analyzing "django.contrib": module is installed, but missing library stubs or py.typed marker  [import]
+- IT314_dummy-main\auto_attendance\urls.py:1: error: Skipping analyzing "django.contrib": module is installed, but missing library stubs or py.typed marker  [import]
+- IT314_dummy-main\auto_attendance\urls.py:2: error: Skipping analyzing "django.urls": module is installed, but missing library stubs or py.typed marker 
  [import]
--IT314_dummy-main\auto_attendance\settings.py:28: error: Need type annotation for "ALLOWED_HOSTS" (hint: "ALLOWED_HOSTS: List[<type>] = ...")  [var-annotated]
--IT314_dummy-main\auto_attendance\asgi.py:12: error: Skipping analyzing "django.core.asgi": module is installed, but missing library stubs or py.typed marker  [import]
--IT314_dummy-main\auto_attendance\asgi.py:12: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
--Found 10 errors in 6 files (checked 7 source files)
+- IT314_dummy-main\auto_attendance\settings.py:28: error: Need type annotation for "ALLOWED_HOSTS" (hint: "ALLOWED_HOSTS: List[<type>] = ...")  [var-annotated]
+- IT314_dummy-main\auto_attendance\asgi.py:12: error: Skipping analyzing "django.core.asgi": module is installed, but missing library stubs or py.typed marker  [import]
+- IT314_dummy-main\auto_attendance\asgi.py:12: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+- Found 10 errors in 6 files (checked 7 source files)
 
